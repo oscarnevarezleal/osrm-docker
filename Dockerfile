@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+ENV PBF_RESOURCE none
+
 RUN \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential git curl \
@@ -22,3 +24,4 @@ RUN \
 WORKDIR /build
 ADD run.sh run.sh
 EXPOSE 5000
+CMD bash run.sh
