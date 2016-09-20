@@ -13,7 +13,7 @@ RUN \
   cd /src && git checkout v4.9.1 && cd ~ && \
   mkdir -p /build && \
   cd /build && \
-  cmake /src && make && \
+  cmake /src && make -j4 && \
   mv /src/profiles/car.lua profile.lua && \
   mv /src/profiles/lib/ lib && \
   echo "disk=/tmp/stxxl,25000,syscall" > /build/.stxxl && \
