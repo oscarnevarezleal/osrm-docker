@@ -4,7 +4,7 @@ ENV PBF_RESOURCE none
 
 RUN \
   DEBIAN_FRONTEND=noninteractive apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential git cmake pkg-config \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential curl git cmake pkg-config \
 	libbz2-dev libstxxl-dev libstxxl1v5 libxml2-dev \
 	libzip-dev libboost-all-dev lua5.1 liblua5.1-0-dev libluabind-dev libtbb-dev curl
 
